@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container" style="margin-top: 10%;">
+    <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5">
+            <h3 class="text-center">Giriş Yap</h3>
+            <form id="loginForm">
+                <div class="form-group mb-2">
+                    <label>Email adresi</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="form-group mb-2">
+                    <label>Şifre</label>
+                    <input type="password" class="form-control" id="password" placeholder="Şifre">
+                </div>
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                <hr />
+                <div class="form-group mb-2">
+                    <a class="float-start" style="cursor:pointer;text-decoration:none" onclick="resetPass()">Şifremi unuttum</a>
+                    <a class="float-end" style="cursor:pointer;text-decoration:none" onclick="kayıtOl()">Kayıt Ol</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
