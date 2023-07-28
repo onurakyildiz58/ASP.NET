@@ -12,32 +12,50 @@
     <div class="row d-flex align-items-center justify-content-center">
         <div class="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5">
             <h3 class="text-center">Kayıt Ol</h3>
-            <form id="loginForm">
+            <form id="registerForm">
                 <div class="form-group mb-2">
                     <label>İsim</label>
-                    <input type="text" class="form-control" id="name" placeholder="İsim">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="İsim">
                 </div>
                 <div class="form-group mb-2">
                     <label>Soyisim</label>
-                    <input type="text" class="form-control" id="lastname" placeholder="Soyisim">
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Soyisim">
                 </div>
                 <div class="form-group mb-2">
                     <label>Email adresi</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="mail" placeholder="Email">
                 </div>
                 <div class="form-group mb-2">
                     <label>Şifre</label>
-                    <input type="password" class="form-control" id="password" placeholder="Şifre">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre">
                 </div>
+                
                 <div class="form-group mb-2">
                     <label>Şifre Tekrarı</label>
                     <input type="password" class="form-control" id="password-confirm" placeholder="Şifre">
                 </div><hr />
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-                    <a class="float-end mt-1" style="cursor:pointer;text-decoration:none" onclick="girişYap()">Giriş Yap</a>
+                    <button type="submit" class="btn btn-primary" onclick="register()">Kayıt Ol</button>
+                    <a class="float-end mt-1" style="cursor:pointer;text-decoration:none">Hesabım Var</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    
+    function register()
+    {
+        var data = $("#registerForm").serialize();
+        
+        $.ajax({
+            type: "Post",
+            data: data,
+            url: "/register/saveData",
+            success: function (result) {
+                alert(result);
+            }
+        });
+    }
+</script>

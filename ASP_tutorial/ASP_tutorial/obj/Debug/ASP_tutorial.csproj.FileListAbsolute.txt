@@ -84,3 +84,7 @@ C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\obj\De
 C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\obj\Debug\ASP_tutorial.csproj.CopyComplete
 C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\obj\Debug\ASP_tutorial.dll
 C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\obj\Debug\ASP_tutorial.pdb
+C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\bin\EntityFramework.dll
+C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\bin\EntityFramework.SqlServer.dll
+C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\bin\EntityFramework.xml
+C:\Users\onura\OneDrive\Belgeler\GitHub\ASP.NET\ASP_tutorial\ASP_tutorial\bin\EntityFramework.SqlServer.xml
