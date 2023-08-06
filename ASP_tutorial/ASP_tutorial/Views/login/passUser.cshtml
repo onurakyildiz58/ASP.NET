@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "passUser";
+}
+
+<h2>passUser</h2>
+
+@if (Session["id"] != null)
+{
+    <div>
+        <a>@Session["name"]</a>
+        <a href="/login/logout">Çıkış Yap</a>
+    </div>
+}
+

@@ -198,6 +198,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\sweetalert.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -224,6 +225,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\register\Index.cshtml" />
     <Content Include="Views\login\Index.cshtml" />
+    <Content Include="Views\login\passUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

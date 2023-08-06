@@ -13,21 +13,55 @@
         <div class="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5">
             <h3 class="text-center">Giriş Yap</h3>
             <form id="loginForm">
+                <div id="msg1" style="display: none">
+                    <div class="alert alert-danger">
+                        <span><strong>Yanlış Mail ya da Şifre</strong></span>
+                    </div>
+                </div>
+                <div id="msg2" style="display: none">
+                    <div class="alert alert-success">
+                        <span><strong>Giriş Başarılı</strong></span>
+                    </div>
+                </div>
                 <div class="form-group mb-2">
                     <label>Email adresi</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" class="form-control" id="mail" name="mail" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="form-group mb-2">
                     <label>Şifre</label>
-                    <input type="password" class="form-control" id="password" placeholder="Şifre">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Şifre">
                 </div>
-                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                <button type="submit" class="btn btn-primary" onclick="login()">Giriş Yap</button>
                 <hr />
                 <div class="form-group mb-2">
-                    <a class="float-start" style="cursor:pointer;text-decoration:none" onclick="resetPass()">Şifremi unuttum</a>
-                    <a class="float-end" style="cursor:pointer;text-decoration:none" onclick="kayıtOl()">Kayıt Ol</a>
+                    <a href="" class="float-start" style="cursor:pointer;text-decoration:none" onclick="resetPass()">Şifremi unuttum</a>
+                    <a href="/register/index" class="float-end" style="cursor:pointer;text-decoration:none" onclick="kayıtOl()">Kayıt Ol</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    var login = function () {
+        var data = $("#loginForm").serialize();
+        debugger
+        $.ajax({
+            type: "Post",
+            data: data,
+            url: "/register/checkUser",
+            success: function (result) {
+                if (result == "Başarısız") {
+                    document.getElementById("msg1").style.display = "block";
+                    document.getElementById("msg2").style.display = "none";
+                }
+                else {
+                    document.getElementById("msg1").style.display = "none";
+                    document.getElementById("msg2").style.display = "block";
+                    window.location.href = "/login/passUser";
+                }
+                
+            }
+        });
+    }
+</script>

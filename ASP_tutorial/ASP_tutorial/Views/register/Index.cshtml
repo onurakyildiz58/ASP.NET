@@ -13,6 +13,21 @@
         <div class="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5">
             <h3 class="text-center">Kayıt Ol</h3>
             <form id="registerForm">
+                <div id="msg1" style="display: none">
+                    <div class="alert alert-danger">
+                        <span><strong>Bilgiler Boş Kalamaz</strong></span>
+                    </div>
+                </div>
+                <div id="msg2" style="display: none">
+                    <div class="alert alert-danger">
+                        <span><strong>Şifreler Eşleşmiyor</strong></span>
+                    </div>
+                </div>
+                <div id="msg3" style="display: none">
+                    <div class="alert alert-success">
+                        <span><strong>Kayıt Başarılı</strong></span>
+                    </div>
+                </div>
                 <div class="form-group mb-2">
                     <label>İsim</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="İsim">
@@ -29,33 +44,54 @@
                     <label>Şifre</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="Şifre">
                 </div>
-                
                 <div class="form-group mb-2">
                     <label>Şifre Tekrarı</label>
                     <input type="password" class="form-control" id="password-confirm" placeholder="Şifre">
                 </div><hr />
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary" onclick="register()">Kayıt Ol</button>
-                    <a class="float-end mt-1" style="cursor:pointer;text-decoration:none">Hesabım Var</a>
+                    <a href="/login/index" class="float-end mt-1" style="cursor:pointer;text-decoration:none">Hesabım Var</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-<script>
-    
-    function register()
-    {
+<script> 
+    function register() {
         var data = $("#registerForm").serialize();
         
-        $.ajax({
-            type: "Post",
-            data: data,
-            url: "/register/saveData",
-            success: function (result) {
-                alert(result);
+        var name = $("#name").val();
+        var lname = $("#lastname").val();
+        var mail = $("#mail").val();
+        var pass = $("#password").val();
+        var passCon = $("#password-confirm").val();
+
+        if (name == "" || lname == "" || mail == "" || pass == "" || passCon == "") {
+            document.getElementById("msg1").style.display = "block";
+            document.getElementById("msg2").style.display = "none";
+            document.getElementById("msg3").style.display = "none";
+        }
+        else {
+            if (pass == passCon) {
+                $.ajax({
+                    type: "Post",
+                    data: data,
+                    url: "/register/saveData",
+                    success: function (result) {
+                        document.getElementById("msg1").style.display = "none";
+                        document.getElementById("msg2").style.display = "none";
+                        document.getElementById("msg3").style.display = "block";
+                    }
+                });
             }
-        });
+            else {
+                document.getElementById("msg1").style.display = "none";
+                document.getElementById("msg2").style.display = "block";
+                document.getElementById("msg3").style.display = "none";
+                return false;
+            }
+        }
     }
 </script>
