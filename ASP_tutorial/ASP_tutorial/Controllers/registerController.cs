@@ -21,26 +21,24 @@ namespace ASP_tutorial.Controllers
         
         public JsonResult saveData(TBL_users model)
         {
-            model.isExists = false;
-            model.createdAt = DateTime.Now;
-            db.TBL_users.Add(model);
-            db.SaveChanges();
-            return Json("Kayıt Başarılı", JsonRequestBehavior.AllowGet);
-
-        }
-
-        public JsonResult checkUser(TBL_users model)
-        {
-            string result = "Başarısız";
-            var data = db.TBL_users.Where(x => x.mail == model.mail && x.password == model.password).SingleOrDefault();
-            if (data != null)
+            var chech = db.TBL_users.Where(x=>x.mail == model.mail).SingleOrDefault();
+            if (chech == null)
             {
-                Session["id"] = data.id.ToString();
-                Session["name"] = data.name.ToString();
-                result = "Başarılı";
+                model.isExists = true;
+                model.role = false;
+                model.createdAt = DateTime.Now;
+                db.TBL_users.Add(model);
+                db.SaveChanges(); 
+                return Json("Kayıt Başarılı", JsonRequestBehavior.AllowGet);
             }
-            return Json(result, JsonRequestBehavior.AllowGet);
+            else
+            {
+                return Json("Lütfen Farklı Mail Adresi Kullanınız", JsonRequestBehavior.AllowGet);
+            }
+            
         }
+
+        
 
         
     }

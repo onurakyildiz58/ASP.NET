@@ -21,5 +21,6 @@ namespace ASP_tutorial.Models
         public string password { get; set; }
         public Nullable<bool> isExists { get; set; }
         public Nullable<System.DateTime> createdAt { get; set; }
+        public Nullable<bool> role { get; set; }
     }
 }

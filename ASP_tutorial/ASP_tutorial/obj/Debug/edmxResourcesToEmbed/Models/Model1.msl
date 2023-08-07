@@ -4,6 +4,7 @@
     <EntitySetMapping Name="TBL_users">
       <EntityTypeMapping TypeName="DB_tutorialModel.TBL_users">
         <MappingFragment StoreEntitySet="TBL_users">
+          <ScalarProperty Name="role" ColumnName="role" />
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="lastname" ColumnName="lastname" />

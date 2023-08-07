@@ -11,6 +11,7 @@
     <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="isExists" Type="Boolean" />
     <Property Name="createdAt" Type="DateTime" Precision="0" />
+    <Property Name="role" Type="Boolean" />
   </EntityType>
   <EntityContainer Name="DB_tutorialEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="TBL_users" EntityType="Self.TBL_users" />

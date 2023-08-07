@@ -16,6 +16,19 @@ namespace ASP_tutorial.Controllers
             return View();
         }
 
+        public JsonResult checkUser(TBL_users model)
+        {
+            string result = "Başarısız";
+            var data = db.TBL_users.Where(x => x.mail == model.mail && x.password == model.password).SingleOrDefault();
+            if (data != null)
+            {
+                Session["id"] = data.id.ToString();
+                Session["name"] = data.name.ToString();
+                result = "Başarılı";
+            }
+            return Json(result, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult passUser()
         {
             if (Session["id"] != null)

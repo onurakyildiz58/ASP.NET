@@ -11,6 +11,7 @@
     <Property Name="password" Type="nvarchar" MaxLength="50" />
     <Property Name="isExists" Type="bit" />
     <Property Name="createdAt" Type="date" />
+    <Property Name="role" Type="bit" />
   </EntityType>
   <EntityContainer Name="DB_tutorialModelStoreContainer">
     <EntitySet Name="TBL_users" EntityType="Self.TBL_users" Schema="dbo" store:Type="Tables" />

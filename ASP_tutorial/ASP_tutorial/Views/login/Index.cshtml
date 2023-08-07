@@ -45,11 +45,11 @@
 <script>
     var login = function () {
         var data = $("#loginForm").serialize();
-        debugger
+        
         $.ajax({
             type: "Post",
             data: data,
-            url: "/register/checkUser",
+            url: "/login/checkUser",
             success: function (result) {
                 if (result == "Başarısız") {
                     document.getElementById("msg1").style.display = "block";
