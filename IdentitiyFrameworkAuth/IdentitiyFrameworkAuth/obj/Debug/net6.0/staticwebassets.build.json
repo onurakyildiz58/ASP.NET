@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T6M1CtNvuq1JpoA+aERARY7CPtAUUH2gWwXLniJWJ6U=",
+  "Hash": "3tuFjtfnbvNFjY3DW1C6rki0Prk7uisowyqHkgh8F+I=",
   "Source": "IdentitiyFrameworkAuth",
   "BasePath": "_content/IdentitiyFrameworkAuth",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\onura\\OneDrive\\Belgeler\\GitHub\\ASP.NET\\IdentitiyFrameworkAuth\\IdentitiyFrameworkAuth\\wwwroot\\js\\qr.js",
+      "SourceId": "IdentitiyFrameworkAuth",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\onura\\OneDrive\\Belgeler\\GitHub\\ASP.NET\\IdentitiyFrameworkAuth\\IdentitiyFrameworkAuth\\wwwroot\\",
+      "BasePath": "_content/IdentitiyFrameworkAuth",
+      "RelativePath": "js/qr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\qr.js"
+    },
+    {
       "Identity": "C:\\Users\\onura\\OneDrive\\Belgeler\\GitHub\\ASP.NET\\IdentitiyFrameworkAuth\\IdentitiyFrameworkAuth\\wwwroot\\js\\site.js",
       "SourceId": "IdentitiyFrameworkAuth",
       "SourceType": "Discovered",
@@ -2089,6 +2106,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\onura\\OneDrive\\Belgeler\\GitHub\\ASP.NET\\IdentitiyFrameworkAuth\\IdentitiyFrameworkAuth\\wwwroot\\lib\\qrcode.js",
+      "SourceId": "IdentitiyFrameworkAuth",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\onura\\OneDrive\\Belgeler\\GitHub\\ASP.NET\\IdentitiyFrameworkAuth\\IdentitiyFrameworkAuth\\wwwroot\\",
+      "BasePath": "_content/IdentitiyFrameworkAuth",
+      "RelativePath": "lib/qrcode.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\qrcode.js"
     }
   ]
 }
