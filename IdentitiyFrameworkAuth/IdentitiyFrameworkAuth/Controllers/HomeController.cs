@@ -2,6 +2,8 @@
 using IdentitiyFrameworkAuth.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
+using System.Data;
 using System.Diagnostics;
 
 namespace IdentitiyFrameworkAuth.Controllers
@@ -33,5 +35,6 @@ namespace IdentitiyFrameworkAuth.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }
