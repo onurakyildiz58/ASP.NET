@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\IdentitiyFrameworkAuth\\Areas",
+    "\\IdentitiyFrameworkAuth\\Areas\\Identity",
+    "\\IdentitiyFrameworkAuth\\Areas\\Identity\\Pages",
+    "\\IdentitiyFrameworkAuth\\Areas\\Identity\\Pages\\Account",
+    "\\IdentitiyFrameworkAuth\\Controllers",
+    "\\IdentitiyFrameworkAuth\\Migrations",
+    "\\IdentitiyFrameworkAuth\\Properties",
+    "\\IdentitiyFrameworkAuth\\Views",
+    "\\IdentitiyFrameworkAuth\\Views\\Home",
+    "\\IdentitiyFrameworkAuth\\wwwroot\\lib"
+  ],
+  "PreviewInSolutionExplorer": false
+}
